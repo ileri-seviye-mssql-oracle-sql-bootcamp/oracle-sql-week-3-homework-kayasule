@@ -1,0 +1,125 @@
+--1.INNER JOIN
+
+select STUDENTS.StudentID,STUDENTS.FirstName,STUDENTS.LastName,STUDENTS.Department,COURSES.CourseName,COURSES.EnrollDate
+from STUDENTS
+inner join COURSES
+on STUDENTS.StudentID=COURSES.StudentID;
+
+--2.INNER JOIN
+
+select STUDENTS.StudentID,STUDENTS.Address,STUDENTS.Department,ZIPCODE.City
+from STUDENTS
+inner join ZIPCODE
+on STUDENTS.ZipCode=ZIPCODE.ZipCode
+where ZIPCODE.Country='Turkey';
+
+--3.LEFT OUTER JOIN
+
+select ZIPCODE.Country,ZIPCODE.City,STUDENTS.FirstName,STUDENTS.MiddleName,STUDENTS.LastName
+from ZIPCODE
+left outer join STUDENTS
+on ZIPCODE.ZipCode=STUDENTS.ZipCode;
+
+--4.FULL OUTER JOIN
+
+select STUDENTS.StudentID,STUDENTS.FirstName,STUDENTS.LastName,STUDENTS.Department,COURSES.CourseName,COURSES.FinalGrade
+from STUDENTS
+full outer join COURSES
+on STUDENTS.StudentID=COURSES.StudentID
+where STUDENTS.FirstName LIKE '%a%';
+
+--5.UNION
+
+select FirstName
+from STUDENTS
+union
+select InstructorName
+from COURSES;
+
+--6.UNION
+
+select StudentID,BirthDate
+from STUDENTS
+where BirthDate 
+ between
+     to_date('1985-01-01','YYYY-MM-DD')
+   and
+     to_date('2010-01-01' ,'YYYY-MM-DD');
+select ZipCode,CreatedDate
+from ZIPCODE
+where Zipcode>10000;
+
+--7.UNION ALL
+
+select StudentID
+from STUDENTS
+union all
+select InstructorID
+from COURSES;
+
+--8.UNION ALL
+
+select Region,Country
+from ZIPCODE
+where Region is not null
+union all
+select CourseName,InstructorName
+from COURSES
+where CourseName like '%i%';
+
+--9.LOWER
+
+select CourseID,CourseName,InstructorName
+from COURSES
+where lower(CourseName)='Music';
+
+--10.UPPER
+
+select Region,CreatedDate,upper(Country)
+from ZIPCODE;
+
+--11.LENGTH
+
+select FirstName,LastName,length(Address)
+from STUDENTS;
+
+--12.INSTR
+
+select StudentID,CourseName,EnrollDate,InstructorName,
+instr(InstructorName,'a') "Contains 'a'?"
+from COURSES;
+
+--13.CONCAT
+
+select StudentID,concat(FirstName,MiddleName)NAME,LastName
+from STUDENTS;
+
+--14.LPAD
+
+select Phone,lpad(Phone,9,'*')
+from STUDENTS;
+
+--15.RPAD
+
+select Phone,rpad(Phone,9,'*')
+from STUDENTS;
+
+--16.REPLACE
+
+select replace('SULE and YA','Y','KAY') from dual;
+
+--17.TRIM
+
+select trim('o' from 'oOracleSQL') from dual;
+
+--18.ROUND
+
+select round(15.823,2),round(15.823,0),round(15.823,-1) from dual;
+
+--19.TRUNC
+
+select trunc(15.823,2),trunc(15.823),trunc(15.823,-1) from dual;
+
+--20.SYSDATE
+
+select sysdate from dual;

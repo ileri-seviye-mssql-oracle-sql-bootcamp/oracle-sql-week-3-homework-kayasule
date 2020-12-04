@@ -1,0 +1,80 @@
+
+--ZIPCODE TABLE
+
+INSERT INTO ZIPCODE
+(ZipCode, Region,Country, City,CreatedDate, ModifiedDate)
+VALUES (15777,'','United Kingdom','Birmingham',DATE '2016-05-07', DATE '2020-03-11');	
+			
+INSERT INTO ZIPCODE
+(ZipCode, Region,Country, City,CreatedDate, ModifiedDate)
+VALUES (85241,'Europe','France','Paris',DATE '2014-07-07', DATE '2020-05-12');	
+		
+INSERT INTO ZIPCODE
+(ZipCode, Region,Country, City,CreatedDate, ModifiedDate)
+VALUES (9765,'Europe','Spain','Ibiza',DATE '2018-06-07', DATE '2020-01-21');
+				
+INSERT INTO ZIPCODE
+(ZipCode, Region,Country, City,CreatedDate, ModifiedDate)
+VALUES (75368,'Europe','Italy','Rome',DATE '2013-03-08', DATE '2020-03-15');			
+
+INSERT INTO ZIPCODE
+(ZipCode, Region,Country, City,CreatedDate, ModifiedDate)
+VALUES (45623,'Europe','Turkey','Ankara',DATE '2017-06-07', DATE '2020-01-21');				
+
+
+
+
+
+--STUDENT TABLE
+
+INSERT INTO STUDENTS
+(StudentID, FirstName,MiddleName, LastName,BirthDate, Department,Phone, Address,ZipCode,RegistrationDate)
+VALUES (1102880596,'Eylül','Ezgi','Öz',DATE '1990-09-29','Education','81962542200', 'Ace Corner, N Circular Rd, London NW10 7UD',15777,DATE '2012-09-21');
+
+INSERT INTO STUDENTS
+(StudentID, FirstName,MiddleName, LastName,BirthDate, Department,Phone, Address,ZipCode,RegistrationDate)
+VALUES (3764086317,'Oguzhan','','Gurbuz',DATE '1987-04-20','Business',5913900225,'2 Barnard Cl, Woolwich, London SE18 6JQ',85241,DATE '2010-11-12');
+
+INSERT INTO STUDENTS
+(StudentID, FirstName,MiddleName, LastName,BirthDate, Department,Phone, Address,ZipCode,RegistrationDate)
+VALUES (5976777793,'Ararat','','Çetinkaya',DATE '1996-09-17','Medicine',78337033958,'8 Haymarket, West End, London SW1Y 4BP',9765,DATE '2016-08-01');
+
+INSERT INTO STUDENTS
+(StudentID, FirstName,MiddleName, LastName,BirthDate, Department,Phone, Address,ZipCode,RegistrationDate)
+VALUES (6338239295,'Fatma','Çaglayan','Barutcu',DATE '1995-12-06','Law',5068873920,'Thames Wharf, Rainville Rd, Hammersmith, London W6 9HA',75368,DATE '2018-06-03');
+
+INSERT INTO STUDENTS
+(StudentID, FirstName,MiddleName, LastName,BirthDate, Department,Phone, Address,ZipCode,RegistrationDate)
+VALUES (8739382880,'Ozge','','Serdar',DATE '1991-06-28','Engineering',59774628388,'99 St Martin's Ln, Covent Garden, London WC2N 4AZ',45623,DATE '2017-05-11');
+
+
+
+
+
+--COURSES TABLE
+
+
+INSERT INTO COURSES
+(StudentID, CourseID,CourseName, EnrollDate, FinalGrade,InstructorID,SectionID)
+VALUES (7317668892,835,'Agile Meets Design Thinking',DATE '2017-03-10','A','Jeff',37698,2);
+
+INSERT INTO COURSES
+(StudentID, CourseID,CourseName, EnrollDate, FinalGrade,InstructorID,SectionID)
+VALUES (7596704763,989,'Introduction to Virtual Reality',DATE '2020-05-18','A+','Charles',61753,3);
+
+INSERT INTO COURSES
+(StudentID, CourseID,CourseName, EnrollDate, FinalGrade,InstructorID,SectionID)
+VALUES (9566387245,648,'Big Data Integration and Processing',DATE '2019-11-11','B-','Sue',9783,4);
+
+INSERT INTO COURSES
+(StudentID, CourseID,CourseName, EnrollDate, FinalGrade,InstructorID,SectionID)
+VALUES (7834931278,650,'Blockchain Basics',DATE '2018-10-17','C+','Ricardo',72116,6);
+
+INSERT INTO COURSES
+(StudentID, CourseID,CourseName, EnrollDate, FinalGrade,InstructorID,SectionID)
+VALUES (137138371,308,'Business Strategy',DATE '2020-09-30','A-','Tobias',40906,3);
+
+
+
+
+
